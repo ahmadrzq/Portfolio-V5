@@ -1,0 +1,36 @@
+/* *About */
+.about__content {
+  text-align: center;
+}
+.about__content p {
+  font-size: 1.2rem;
+  border-radius: var(--size-radius);
+  padding: 5rem;
+  background: var(--color-light-1);
+  line-height: 2.5rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+  color: var(--color-dark-1);
+  border: 3px solid var(--color-dark-1);
+}
+.socials {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  padding: 1rem;
+  border-radius: var(--size-radius);
+  background: var(--color-light-1);
+  border: 3px solid var(--color-dark-1);
+}
+.socials a {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+.socials img {
+  width: 40px;
+  height: auto;
+}
+.socials a:hover {
+  scale: 1.5;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
