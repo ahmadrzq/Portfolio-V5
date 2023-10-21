@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
@@ -16,6 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <main className="main">
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
