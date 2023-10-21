@@ -1,17 +1,18 @@
+import { Link } from 'react-router-dom'
 import './Navigation.css'
 
 export default function Navigation() {
     return (
         <nav class="nav">
             <ul class="nav__list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/blog.html">Blog</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/education.html">Education</a></li>
-                <li><a href="pages/experience.html">Experience</a></li>
-                <li><a href="pages/portfolio.html">Portfolio</a></li>
-                <li><a href="pages/skills.html">Skills</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/education">Education</Link></li>
+                <li><Link to="/experience">Experience</Link></li>
+                <li><Link to="/portfolio">Portfolio</Link></li>
+                <li><Link to="/skills">Skills</Link></li>
             </ul>
         </nav>
     )
