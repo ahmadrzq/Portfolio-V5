@@ -36,6 +36,42 @@ export default function Blog() {
       image: post3,
       category: 'web',
     },
+    {
+      id: 4,
+      title: 'How to install figma on debian 12 XFCE',
+      date: '1 Oktober 2023',
+      description:
+        'Figma is a web-based graphics editing and prototyping tool. It is primarily used for user interface and user experience design. Figma is a popular tool for web designers because it allows them to create and share designs in real-time.',
+      image: post1,
+      category: 'design',
+    },
+    {
+      id: 5,
+      title: 'How to create BRD using Figma',
+      date: '2 Oktober 2023',
+      description:
+        'A business requirements document (BRD) is a formal contract between the organization and the customer for a product. A BRD is used through the entire cycle of the project to ensure that the product meets the detailed specifications and that the project gains value and achieves the desired results.',
+      image: post2,
+      category: 'design',
+    },
+    {
+      id: 6,
+      title: 'How to install Nodejs debian 12',
+      date: '3 Oktober 2023',
+      description:
+        'Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command-line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user\'s web browser.',
+      image: post3,
+      category: 'tools',
+    },
+    {
+      id: 7,
+      title: 'How to install react using vite',
+      date: '10 Oktober 2023',
+      description:
+        'Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts: a dev server that serves your source files over native ES modules, and a build command that bundles your code with Rollup for production.',
+      image: post1,
+      category: 'tools',
+    },
   ]
 
   // Search Function
@@ -51,6 +87,18 @@ export default function Blog() {
     setSearchResults(results)
   }, [searchTerm])
 
+  // read the first option value from select
+  const [filter, setFilter] = useState('');
+  const handleFilter = (e) => {
+    setFilter(e.target.value.toLowerCase());
+  };
+  useEffect(() => {
+    const results = filter === 'all' ? posts : posts.filter((post) =>
+      post.category.toLowerCase().includes(filter)
+    );
+    setSearchResults(results);
+  }, [filter]);
+
   return (
     <section className="blog section">
       <Title value="My Blog" />
@@ -63,7 +111,8 @@ export default function Blog() {
             </button>
           </form>
           <div className="filter__menu">
-            <select name="filter" id="" >
+            <select name="filter" id="" onChange={handleFilter} value={filter} >
+              <option className="filter-option" value="all">All</option>
               <option className="filter-option" value="web">Web</option>
               <option className="filter-option" value="design">Design</option>
               <option className="filter-option" value="tools">Tools</option>
