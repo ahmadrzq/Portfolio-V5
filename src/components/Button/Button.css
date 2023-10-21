@@ -1,0 +1,15 @@
+.btn__default-light {
+  padding: 0.7rem 0.8rem;
+  background: var(--font-white);
+  border: 2px solid var(--color-light-2);
+  color: var(--color-dark-1);
+  border-radius: var(--size-radius);
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715) 0.15s;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.btn__default-light:hover {
+  border: 2px solid var(--color-light-1);
+  background: var(--color-light-1);
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715) 0.15s;
+}
