@@ -3,8 +3,8 @@ import './Navigation.css'
 
 export default function Navigation() {
     return (
-        <nav class="nav">
-            <ul class="nav__list">
+        <nav className="nav">
+            <ul className="nav__list">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
