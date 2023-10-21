@@ -1,0 +1,22 @@
+/* *Button Sidebar */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -35px;
+  cursor: pointer;
+  z-index: 99999;
+}
+.btn__sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 64px;
+  background: transparent;
+  border-radius: 50%;
+  border: 3px dotted var(--font-white);
+}
+.sidebar:hover :is(.nav) {
+  left: 28px;
+  transition: left 0.3s;
+}
