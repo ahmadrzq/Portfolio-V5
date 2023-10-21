@@ -1,0 +1,29 @@
+/* *Homepage */
+.home__img {
+  width: 300px;
+  height: 300px;
+  background: var(--color-light-2);
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 3.4px 3.4px 2.7px rgba(0, 0, 0, 0.062),
+    8.7px 8.7px 6.9px rgba(0, 0, 0, 0.089),
+    17.7px 17.7px 14.2px rgba(0, 0, 0, 0.111),
+    36.5px 36.5px 29.2px rgba(0, 0, 0, 0.138),
+    100px 100px 80px rgba(0, 0, 0, 0.2);
+}
+.home__content {
+  font-family: "Dela Gothic One";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  color: var(--color-light-1);
+  margin-bottom: 1.5rem;
+}
+.home__content-name {
+  color: var(--color-light-2);
+}
+.home__btn {
+  margin-top: 1rem;
+}
