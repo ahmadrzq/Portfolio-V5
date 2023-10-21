@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M122 296L122 296L122 346L72 346L72 296L122 296Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Facebook" clip-path="url(#clip_1)">
+    <path d="M122 296L122 296L122 346L72 346L72 296L122 296Z" id="Facebook" fill="none" stroke="none" />
+    <path d="M41 4L9 4C6.24 4 4 6.24 4 9L4 41C4 43.76 6.24 46 9 46L41 46C43.76 46 46 43.76 46 41L46 9C46 6.24 43.76 4 41 4L41 4ZM37 19L35 19C32.86 19 32 19.5 32 21L32 24L37 24L36 29L32 29L32 44L27 44L27 29L23 29L23 24L27 24L27 21C27 17 29 14 33 14C35.9 14 37 15 37 15L37 19L37 19Z" id="Shape" fill="#27374D" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
