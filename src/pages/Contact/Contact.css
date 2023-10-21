@@ -1,0 +1,41 @@
+/* *Contact */
+.contact__content {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  align-items: flex-start;
+  padding: 0rem 5rem;
+}
+.contact__details {
+  margin-right: 1rem;
+}
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.form__group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.25rem;
+}
+.input__control {
+  color: var(--color-dark-1);
+  background-color: var(--color-light-2);
+  border: 1px solid transparent;
+  padding: 0.9rem 0.75rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.textarea {
+  height: 140px;
+  resize: none;
+  outline: none;
+}
+.contact__form button {
+  float: right;
+  cursor: pointer;
+}
