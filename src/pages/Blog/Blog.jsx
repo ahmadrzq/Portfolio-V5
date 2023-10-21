@@ -38,13 +38,26 @@ export default function Blog() {
     },
   ]
 
+  // Search Function
+  const [searchTerm, setSearchTerm] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value)
+  }
+  useEffect(() => {
+    const results = posts.filter((post) =>
+      post.title.toLowerCase().includes(searchTerm)
+    )
+    setSearchResults(results)
+  }, [searchTerm])
+
   return (
     <section className="blog section">
       <Title value="My Blog" />
       <div className="blog__content">
         <div className="content__menu">
           <form className="search__menu">
-            <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="Search..." onChange={handleChange} value={searchTerm} />
             <button>
               <img src={search} alt="" />
             </button>
@@ -59,7 +72,7 @@ export default function Blog() {
         </div>
 
         <div className="content__post">
-          {posts.map((post) => (
+          {searchResults.map((post) => (
             <CardPost
               key={post.id}
               image={post.image}
