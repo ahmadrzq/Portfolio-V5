@@ -1,0 +1,22 @@
+.title__pages {
+  margin-bottom: 2.5rem;
+}
+
+.title__pages h3 {
+  position: relative;
+  padding-bottom: 0.6rem;
+  color: var(--color-light-2);
+}
+
+.title__pages h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 5px;
+  background: var(--color-light-2);
+  border-radius: 15px;
+}

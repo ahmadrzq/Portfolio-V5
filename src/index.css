@@ -92,41 +92,4 @@ p {
   align-items: center;
   justify-content: center;
 }
-.about__title,
-.blog__title,
-.contact__title,
-.experience__title,
-.education__title,
-.portfolio__title,
-.skills__title {
-  margin-bottom: 2.5rem;
-}
-.about__title h3,
-.blog__title h3,
-.contact__title h3,
-.education__title h3,
-.experience__title h3,
-.portfolio__title h3,
-.skills__title h3 {
-  position: relative;
-  padding-bottom: 0.6rem;
-  color: var(--color-light-2);
-}
-.about__title h3::after,
-.blog__title h3::after,
-.contact__title h3::after,
-.education__title h3::after,
-.experience__title h3::after,
-.portfolio__title h3::after,
-.skills__title h3::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 5px;
-  background: var(--color-light-2);
-  border-radius: 15px;
-}
+
