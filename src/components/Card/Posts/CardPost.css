@@ -1,0 +1,22 @@
+.card__post {
+  height: 600px;
+  background: var(--color-light-1);
+  overflow: hidden;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 3px solid var(--color-dark-1);
+}
+.card__post-img img {
+  border-radius: 5px;
+}
+.title__post h2 {
+  color: var(--color-dark-1);
+}
+.title__post h5 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.description__post p {
+  color: #526d82;
+  text-align: justify;
+}
