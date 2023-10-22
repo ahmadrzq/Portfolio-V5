@@ -93,3 +93,137 @@ p {
   justify-content: center;
 }
 
+/* !Responsive */
+/* !Tablet */
+@media screen and (max-width: 920px) {
+  .about__content {
+    padding: 2rem;
+  }
+  .about__content p {
+    padding: 3.5rem;
+  }
+  .content__post {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* !Mobile */
+@media screen and (max-width: 640px) {
+  .sidebar {
+    left: -25px;
+  }
+  .btn__sidebar {
+    max-width: 48px;
+  }
+  .sidebar:hover :is(.nav) {
+    left: 23px;
+  }
+  .home__img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+  .home__content h2 {
+    font-size: 1.2rem;
+  }
+  .home__content h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .home__content h4 {
+    font-size: 0.8rem;
+  }
+  .section {
+    padding: 1.2rem;
+  }
+  .about__content {
+    padding: 1rem;
+  }
+  .about__content p {
+    padding: 1.5rem;
+    line-height: normal;
+  }
+  .contact__content{
+    padding: 0rem 1rem;
+  }
+  .content__menu {
+    min-height: 100%;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .search__menu {
+    width: 100%;
+  }
+  .filter__menu {
+    padding: 0;
+  }
+  .filter__menu select {
+    width: 100%;
+    display: block;
+    height: 40px;
+  }
+  .content__post {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .title__post h2 {
+    font-size: 1.5rem;
+  }
+  .title__post h5 {
+    font-weight: 200;
+  }
+  .description__post p {
+    font-size: 1rem;
+  }
+  .contact__content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .contact__item h3 {
+    font-size: 1.2rem;
+  }
+  .contact__item span {
+    font-size: 1rem;
+  }
+  .form__group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .education__card h4,
+  .experience__card h4 {
+    font-size: 1.1rem;
+  }
+  .education__card div,
+  .experience__card div {
+    flex-direction: column;
+    align-items: start;
+  }
+  .education__card h2,
+  .experience__card h2 {
+    font-size: 1.6rem;
+  }
+  .education__card h3,
+  .experience__card h3 {
+    font-size: 1rem;
+  }
+  .portfolio__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills__content {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  .card__skill {
+    padding: 1rem;
+    width: 100%;
+  }
+  .card__skill svg {
+    height: 48px;
+  }
+  .card__skill h3 {
+    font-size: 1rem;
+  }
+}
