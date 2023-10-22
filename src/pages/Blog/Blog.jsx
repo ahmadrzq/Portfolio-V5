@@ -87,7 +87,7 @@ export default function Blog() {
     setSearchResults(results)
   }, [searchTerm])
 
-  // read the first option value from select
+  // Filter Function
   const [filter, setFilter] = useState('');
   const handleFilter = (e) => {
     setFilter(e.target.value.toLowerCase());
@@ -121,6 +121,12 @@ export default function Blog() {
         </div>
 
         <div className="content__post">
+          {/* Display no data when empty search or filter */}
+          {searchResults.length === 0 && (
+            <div className="no-data">
+              <h2>No Data</h2>
+            </div>
+          )}
           {searchResults.map((post) => (
             <CardPost
               key={post.id}
