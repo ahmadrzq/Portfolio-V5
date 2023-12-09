@@ -9,3 +9,8 @@ export const getLinks = async () => {
     const response = await axios.get('https://portfolio-be-nine.vercel.app/api/v1/links');
     return response.data.data;
 }
+
+export const getEducation = async () => {
+    const response = await axios.get('https://portfolio-be-nine.vercel.app/api/v1/educations');
+    return response.data.data;
+}
