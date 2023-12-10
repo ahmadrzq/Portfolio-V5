@@ -13,9 +13,9 @@ export default function Skills() {
     }, [])
 
     return (
-        <section class="skills section">
+        <section className="skills section">
             <Title value="My Skills" />
-            <div class="skills__content">
+            <div className="skills__content">
                 {skills.map((skill, index) => (
                     <div className="card__skill bshadow" key={index}>
                         <img src={skill.svg} alt="" className='w-50' />
