@@ -14,3 +14,8 @@ export const getEducation = async () => {
     const response = await axios.get('https://portfolio-be-nine.vercel.app/api/v1/educations');
     return response.data.data;
 }
+
+export const getExperience = async () => {
+    const response = await axios.get('https://portfolio-be-nine.vercel.app/api/v1/experiences');
+    return response.data.data;
+}

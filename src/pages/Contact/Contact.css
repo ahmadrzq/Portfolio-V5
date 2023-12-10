@@ -5,6 +5,9 @@
   align-items: flex-start;
   padding: 0rem 5rem;
 }
+.contact__data{
+    color: var(--color-light-2);
+}
 .contact__details {
   margin-right: 1rem;
 }

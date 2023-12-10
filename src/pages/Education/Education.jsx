@@ -12,7 +12,7 @@ export default function Education() {
         getEducation().then((res) => {
             setEducations(res)
         })
-    })
+    }, [])
     return (
         <section className="education section">
             <Title value="My Education" />

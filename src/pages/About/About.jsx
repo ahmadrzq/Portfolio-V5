@@ -12,13 +12,13 @@ export default function About() {
         getUser().then((res) => {
             setDescription(res.description)
         })
-    })
+    }, [])
 
     useEffect(() => {
         getLinks().then((res) => {
             setLinks(res)
         })
-    })
+    }, [])
 
     return (
         <section className="about section">
