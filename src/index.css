@@ -40,6 +40,7 @@ img {
 body {
   font-family: "Gabarito", serif;
   background: url(/image/low-poly-grid-haikei.svg);
+  overflow-x: hidden;
   color: var(--color-light-2);
 }
 h1 {
