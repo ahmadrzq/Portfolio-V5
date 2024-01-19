@@ -1,11 +1,8 @@
 import Button from '../../components/Button/Button'
 import './Home.css'
 import me from '/image/me.png'
-import { useSelector } from 'react-redux'
 
 export default function Home() {
-    const user = useSelector(state => state.data.user);
-
     return (
         <section className="homepage">
             <div className="home__img">
@@ -14,7 +11,7 @@ export default function Home() {
             <div className="home__content">
                 <h2>Welcome to my Website</h2>
                 <h1>
-                    I'm <span className="home__content-name">{user && user.name}</span>
+                    I'm <span className="home__content-name">Ahmad Rizqi Isnain</span>
                 </h1>
                 <h4>
                     A <span className="home__content-name">Web Developer</span>, Building
