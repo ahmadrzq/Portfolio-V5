@@ -1,7 +1,7 @@
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Title from '../../components/Title/Title'
 import './About.css'
-import { useSelector } from 'react-redux'
 
 export default function About() {
     const user = useSelector(state => state.data.user);
@@ -15,7 +15,7 @@ export default function About() {
                     {user && user.description}
                 </p>
                 <div className="socials bshadow">
-                    {links.map((link, index) => (
+                    {links && links.map((link, index) => (
                         <Link to={link.url} target="_blank" key={index}>
                             <img src={link.image} alt="" />
                         </Link>
