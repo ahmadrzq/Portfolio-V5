@@ -3,6 +3,7 @@ import './Home.css'
 import me from '/image/me.png'
 
 export default function Home() {
+    const user = useSelector(state => state.data.user);
     return (
         <section className="homepage">
             <div className="home__img">
