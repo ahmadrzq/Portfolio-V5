@@ -12,7 +12,7 @@ export default function CardPortfolio({ image, to, category, name, tech }) {
                     <span className="portfolio__description">{name}</span>
                     <div className="tech">
                         {tech.map((svg, index) => (
-                            <SVGBox key={index} svg={svg} />
+                            <SVGBox key={index} svg={svg.svg} />
                         ))}
                     </div>
 

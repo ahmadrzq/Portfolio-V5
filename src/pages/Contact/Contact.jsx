@@ -1,23 +1,11 @@
-import { useEffect, useState } from 'react'
 import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
 import './Contact.css'
-import { getUser } from '../../services/api'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function Contact() {
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
-    const [address, setAddress] = useState('')
-
-    useEffect(() => {
-        getUser().then(res => {
-            setPhone(res.phone)
-            setEmail(res.email)
-            setAddress(res.address)
-        }
-        )
-    }, [])
+    const user = useSelector(state => state.data.user);
     return (
         <section className="contact section">
             <Title value="Contact Me" />
@@ -26,21 +14,21 @@ export default function Contact() {
                     <div className="contact__item">
                         <div>
                             <h3 >Call</h3>
-                            <Link to={"https://wa.me/6282235955586"}><span className="contact__data">+6282235955586</span></Link>
+                            <Link to={"https://wa.me/6282235955586"}><span className="contact__data">{user && user.phone}</span></Link>
                         </div>
                     </div>
 
                     <div className="contact__item">
                         <div>
                             <h3 >Email</h3>
-                            <Link to={"mailto:ahmadrizqiisnain@gmail.com"}><span className="contact__data">{email}</span></Link>
+                            <Link to={"mailto:ahmadrizqiisnain@gmail.com"}><span className="contact__data">{user && user.email}</span></Link>
                         </div>
                     </div>
 
                     <div className="contact__item">
                         <div>
                             <h3 >Address</h3>
-                            <span className="contact__data">{address}</span>
+                            <span className="contact__data">{user && user.address}</span>
                         </div>
                     </div>
                 </div>

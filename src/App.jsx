@@ -1,7 +1,7 @@
 import {
-  BrowserRouter,
-  Routes,
-  Route,
+    BrowserRouter,
+    Routes,
+    Route,
 } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
@@ -12,25 +12,33 @@ import Education from "./pages/Education/Education";
 import Experience from "./pages/Experience/Experience";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Skills from "./pages/Skills/Skills";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchData } from "./redux/data/dataSlice";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <main className="main">
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
-      </main>
-    </BrowserRouter>
-  )
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchData())
+    }, [dispatch])
+
+    return (
+        <BrowserRouter>
+            <main className="main">
+                <Sidebar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/education" element={<Education />} />
+                    <Route path="/experience" element={<Experience />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/skills" element={<Skills />} />
+                </Routes>
+            </main>
+        </BrowserRouter>
+    )
 }
 
 export default App

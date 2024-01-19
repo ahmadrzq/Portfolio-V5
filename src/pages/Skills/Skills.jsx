@@ -1,16 +1,9 @@
-import { useState } from 'react'
+import { useSelector } from 'react-redux';
 import Title from '../../components/Title/Title'
 import './Skill.css'
-import { useEffect } from 'react'
-import { getSkills } from '../../services/api'
 
 export default function Skills() {
-    const [skills, setSkills] = useState([])
-    useEffect(() => {
-        getSkills().then(res => {
-            setSkills(res)
-        })
-    }, [])
+    const skills = useSelector(state => state.data.skills);
 
     return (
         <section className="skills section">

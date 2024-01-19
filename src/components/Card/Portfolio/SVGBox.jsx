@@ -2,7 +2,6 @@ import './SVGBox.css'
 
 export default function SVGBox({ svg }) {
     return (
-        <span className="tech__item" dangerouslySetInnerHTML={{ __html: svg }} />
+        <img className="tech__item" src={svg} alt=""/>
     )
 }
-
