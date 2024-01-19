@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import Button from '../../components/Button/Button'
 import './Home.css'
 import me from '/image/me.png'
